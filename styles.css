@@ -15,7 +15,7 @@ color:#ffffff;
 
 h2{
 font-size:15px;
-margin-top:26px;
+margin-top:24px;
 margin-bottom:8px;
 color:#9ecbff;
 }
@@ -33,6 +33,26 @@ padding-left:18px;
 
 li{
 margin:4px 0;
+}
+
+nav{
+position:sticky;
+top:0;
+background:#0b0b0b;
+padding:10px 0;
+border-bottom:1px solid #222;
+z-index:1000;
+}
+
+nav a{
+margin-right:16px;
+font-size:14px;
+color:#7fb7ff;
+text-decoration:none;
+}
+
+nav a:hover{
+text-decoration:underline;
 }
 
 a{
