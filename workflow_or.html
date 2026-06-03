@@ -1,112 +1,43 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
 <title>Receiving Patients from OR</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-
-body{
-background:#0b0b0f;
-color:white;
-font-family:Arial;
-margin:0;
-padding:20px;
-}
-
-.topnav{
-display:flex;
-justify-content:space-between;
-gap:6px;
-margin-bottom:20px;
-}
-
-.topnav a{
-flex:1;
-text-align:center;
-background:#1c1c25;
-color:white;
-text-decoration:none;
-padding:10px 6px;
-border-radius:8px;
-font-size:14px;
-}
-
-.section{
-margin-top:20px;
-}
-
-h1{
-margin-bottom:10px;
-font-size:22px;
-}
-
-ul{
-line-height:1.5;
-}
-
-</style>
-
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
 
-<div class="topnav">
-<a href="index.html">Workflow</a>
-<a href="index.html">Surgeries</a>
-<a href="index.html">Problems</a>
-<a href="index.html">MCS</a>
-</div>
-
-<h1>Receiving Patients from the OR</h1>
+<h1>Receiving Patients from OR</h1>
 
 <div class="section">
-
-<h3>Before Arrival</h3>
-
+<h2>Before Arrival</h2>
 <ul>
 <li>Start preliminary handoff note</li>
 <li>Document PMH and surgery type</li>
 </ul>
+</div>
 
-<h3>Handover from OR Team</h3>
-
-<strong>Surgeons</strong>
-
+<div class="section">
+<h2>Handoff</h2>
 <ul>
-<li>Past history</li>
-<li>Surgery details</li>
-<li>Drains and tubes</li>
-<li>Postoperative plan and concerns</li>
-</ul>
-
-<strong>Anesthesiologists</strong>
-
-<ul>
-<li>Airway</li>
-<li>Lines</li>
-<li>Intraoperative course</li>
-<li>Echo report (note LV and RV function)</li>
+<li>Surgical details and postoperative plan</li>
+<li>Airway and lines</li>
+<li>Echo findings (LV/RV function)</li>
 <li>I/O including blood products</li>
-<li>Current rhythm, hemodynamics, drips</li>
-<li>Paralysis reversed</li>
+<li>Rhythm, hemodynamics, drips</li>
 </ul>
+</div>
 
-<h3>First Few Hours After Arrival</h3>
-
+<div class="section">
+<h2>First Hours</h2>
 <ul>
-<li>Monitor bleeding (>200 ml/hr → inform attending surgeon)</li>
-<li>Monitor labs, chest X‑ray, vitals, rhythm, hemodynamics, I/O</li>
-<li>MAP goal 65–85 mm Hg</li>
-<li>If PA catheter present: CI >2.2 and SvO₂ >60</li>
-<li>Patients are often cold → start Bair Hugger</li>
+<li>Monitor bleeding (>200 ml/hr notify surgeon)</li>
+<li>Review labs, chest X‑ray, vitals</li>
+<li>MAP goal 65–85</li>
+<li>If PA catheter: CI >2.2, SvO2 >60</li>
+<li>Warm patient</li>
 </ul>
-
 </div>
 
 </body>
-
 </html>
