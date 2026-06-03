@@ -5,6 +5,8 @@
 
 <title>CTICU Quick Reference</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
 body{
@@ -17,22 +19,23 @@ text-align:center;
 }
 
 .header{
-font-size:32px;
+font-size:28px;
 padding:20px;
 }
 
 .topnav{
 display:flex;
 justify-content:center;
-gap:15px;
+gap:10px;
 padding-bottom:10px;
+flex-wrap:wrap;
 }
 
 .topnav button{
 background:#1c1c25;
 border:none;
 color:white;
-padding:12px 20px;
+padding:12px 16px;
 border-radius:10px;
 cursor:pointer;
 font-size:16px;
@@ -44,8 +47,8 @@ background:#2a2a36;
 
 .subnav{
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
+flex-direction:column;
+align-items:center;
 gap:10px;
 padding:15px;
 }
@@ -54,8 +57,12 @@ padding:15px;
 background:#222;
 color:white;
 text-decoration:none;
-padding:10px 14px;
-border-radius:8px;
+padding:14px;
+border-radius:10px;
+width:90%;
+max-width:400px;
+text-align:center;
+font-size:16px;
 }
 
 .subnav a:hover{
@@ -63,8 +70,8 @@ background:#333;
 }
 
 .instructions{
-margin-top:40px;
-font-size:18px;
+margin-top:30px;
+font-size:16px;
 color:#aaa;
 }
 
@@ -115,59 +122,4 @@ subnav.innerHTML=`
 if(section==="problems"){
 subnav.innerHTML=`
 
-<a href="cardiogenicshock.html">Cardiogenic Shock</a>
-<a href="hypovolemicshock.html">Hypovolemic Shock</a>
-<a href="bleeding.html">Bleeding / Coagulopathy</a>
-<a href="tamponade.html">Tamponade</a>
-<a href="vasoplegia.html">Vasoplegia</a>
-<a href="arrhythmias.html">Arrhythmias</a>
-<a href="respiratoryfailure.html">Respiratory Failure</a>
-<a href="aki.html">AKI</a>
-
-`
-}
-
-if(section==="mcs"){
-subnav.innerHTML=`
-
-<a href="iabp.html">IABP</a>
-<a href="impella.html">Impella</a>
-<a href="vaecmo.html">VA ECMO</a>
-<a href="vvecmo.html">VV ECMO</a>
-<a href="vavecmo.html">V‑AV ECMO</a>
-<a href="hm3.html">HM3 LVAD</a>
-<a href="rvad.html">RVAD</a>
-
-`
-}
-
-}
-
-</script>
-
-</head>
-
-<body>
-
-<div class="header">
-CTICU Quick Reference Guide
-</div>
-
-<div class="topnav">
-
-<button onclick="showSection('workflow')">Workflow</button>
-<button onclick="showSection('surgeries')">Surgeries</button>
-<button onclick="showSection('problems')">Problems</button>
-<button onclick="showSection('mcs')">MCS</button>
-
-</div>
-
-<div id="subnav" class="subnav"></div>
-
-<div class="instructions">
-Select a category above.
-</div>
-
-</body>
-
-</html>
+<a href="cardiogenicshock.html">Card
