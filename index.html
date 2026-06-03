@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>CTICU Quick Reference</title>
 
 <style>
@@ -10,52 +12,60 @@ background:#0b0b0f;
 color:white;
 font-family:Arial;
 margin:0;
-padding-top:120px;
+padding:0;
+text-align:center;
+}
+
+.header{
+font-size:32px;
+padding:20px;
 }
 
 .topnav{
-position:fixed;
-top:0;
-width:100%;
-background:#111;
-padding:10px;
 display:flex;
 justify-content:center;
-gap:10px;
-z-index:1000;
+gap:15px;
+padding-bottom:10px;
 }
 
 .topnav button{
 background:#1c1c25;
 border:none;
 color:white;
-padding:10px 18px;
-border-radius:8px;
+padding:12px 20px;
+border-radius:10px;
 cursor:pointer;
+font-size:16px;
+}
+
+.topnav button:hover{
+background:#2a2a36;
 }
 
 .subnav{
-position:fixed;
-top:60px;
-width:100%;
-background:#16161d;
-padding:10px;
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 gap:10px;
+padding:15px;
 }
 
 .subnav a{
 background:#222;
-padding:8px 14px;
-border-radius:8px;
 color:white;
 text-decoration:none;
+padding:10px 14px;
+border-radius:8px;
 }
 
-.content{
-padding:20px;
+.subnav a:hover{
+background:#333;
+}
+
+.instructions{
+margin-top:40px;
+font-size:18px;
+color:#aaa;
 }
 
 </style>
@@ -68,84 +78,45 @@ const subnav=document.getElementById("subnav")
 
 if(section==="workflow"){
 subnav.innerHTML=`
+
 <a href="workflow_or.html">Receiving OR Patient</a>
 <a href="workflow_planA.html">Plan A Case</a>
-<a href="workflow_sendOR.html">Send to OR</a>
+<a href="workflow_sendOR.html">Send Patient to OR</a>
 <a href="workflow_rounds.html">Morning Rounds</a>
 <a href="workflow_bedflow.html">ICU Bedflow</a>
-<a href="workflow_communication.html">Communication</a>
-<a href="workflow_phones.html">Team Phones</a>
+<a href="workflow_communication.html">Communication Rules</a>
+<a href="workflow_phones.html">Team Phone Numbers</a>
+
 `
 }
 
 if(section==="surgeries"){
 subnav.innerHTML=`
+
 <a href="cabg.html">CABG</a>
 <a href="savr.html">SAVR</a>
 <a href="mvrepair.html">MV Repair</a>
 <a href="mvreplacement.html">MV Replacement</a>
 <a href="tvrepair.html">TV Repair</a>
 <a href="tvr.html">TV Replacement</a>
-<a href="aortic.html">Aortic Surgery</a>
-<a href="transplant.html">Heart Transplant</a>
-<a href="lungtx.html">Lung Transplant</a>
+<a href="aortic.html">Ascending Aortic Surgery</a>
+<a href="taaa.html">Open TAAA Repair</a>
+<a href="hearttransplant.html">Heart Transplant</a>
+<a href="lungtransplant.html">Lung Transplant</a>
+<a href="pte.html">PTE</a>
 <a href="lvad.html">LVAD</a>
 <a href="tavr.html">TAVR</a>
-<a href="tevar.html">TEVAR/EVAR</a>
+<a href="tevar.html">TEVAR / EVAR</a>
+<a href="medicallvad.html">Medical LVAD Admission</a>
+
 `
 }
 
 if(section==="problems"){
 subnav.innerHTML=`
+
 <a href="cardiogenicshock.html">Cardiogenic Shock</a>
-<a href="hypovolemia.html">Hypovolemic Shock</a>
-<a href="bleeding.html">Bleeding</a>
+<a href="hypovolemicshock.html">Hypovolemic Shock</a>
+<a href="bleeding.html">Bleeding / Coagulopathy</a>
 <a href="tamponade.html">Tamponade</a>
-<a href="vasoplegia.html">Vasoplegia</a>
-<a href="arrhythmias.html">Arrhythmias</a>
-<a href="respiratoryfailure.html">Respiratory Failure</a>
-<a href="aki.html">AKI</a>
-`
-}
-
-if(section==="mcs"){
-subnav.innerHTML=`
-<a href="iabp.html">IABP</a>
-<a href="impella.html">Impella</a>
-<a href="vaecmo.html">VA ECMO</a>
-<a href="vvecmo.html">VV ECMO</a>
-<a href="vav.html">V‑AV ECMO</a>
-<a href="hm3.html">HM3 LVAD</a>
-<a href="rvad.html">RVAD</a>
-`
-}
-
-}
-
-</script>
-
-</head>
-
-<body>
-
-<div class="topnav">
-
-<button onclick="showSection('workflow')">Workflow</button>
-<button onclick="showSection('surgeries')">Surgeries</button>
-<button onclick="showSection('problems')">Problems</button>
-<button onclick="showSection('mcs')">MCS</button>
-
-</div>
-
-<div id="subnav" class="subnav"></div>
-
-<div class="content">
-
-<h1>CTICU Quick Reference</h1>
-
-<p>Select a section above.</p>
-
-</div>
-
-</body>
-</html>
+<a href="vasople
