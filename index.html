@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CTICU Guide</title>
+<title>CTICU Quick Reference</title>
 <style>
 body{
 background:#0b0b0f;
@@ -10,50 +10,210 @@ font-family:Arial, sans-serif;
 margin:0;
 padding:20px;
 }
+
 h1{font-size:28px;}
+
+.section{
+margin-top:30px;
+}
+
 .card{
 background:#16161d;
 border-radius:16px;
 padding:16px;
 margin:12px 0;
+cursor:pointer;
 }
-.card h3{margin:0;}
-.tag{
-float:right;
-background:#3a1f1f;
-padding:4px 10px;
-border-radius:10px;
-font-size:12px;
+
+.card h3{
+margin:0;
 }
-.search{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:none;
-margin:15px 0;
-background:#1c1c25;
-color:white;
+
+.content{
+display:none;
+margin-top:10px;
+color:#cfcfcf;
+line-height:1.5;
+}
+
+.subheader{
+font-weight:bold;
+margin-top:10px;
 }
 </style>
+
+<script>
+function toggle(id){
+var x=document.getElementById(id);
+if(x.style.display==="none"){x.style.display="block";}
+else{x.style.display="none";}
+}
+</script>
+
 </head>
 
 <body>
 
 <h1>CTICU Quick Reference Guide</h1>
 
-<input class="search" placeholder="Search...">
+<div class="section">
+<h2>General Workflow</h2>
 
-<h2>Surgery-Based Reference</h2>
+<div class="card" onclick="toggle('orarrival')">
+<h3>Receiving Patients from OR</h3>
+<div id="orarrival" class="content">
 
-<div class="card">
-<h3>CABG <span class="tag">5 topics</span></h3>
-<p>Coronary Artery Bypass Grafting</p>
+<div class="subheader">Before arrival</div>
+- Start prelim handoff note (PMH, surgery type)
+
+<div class="subheader">Handover</div>
+Surgeons:
+- Past history  
+- Surgery details  
+- Drains / tubes  
+- Post‑op plan
+
+Anesthesia:
+- Airway  
+- Lines  
+- Intraop course  
+- Echo (LV/RV function)  
+- Blood products  
+- Rhythm / drips  
+- Paralysis reversed?
+
+<div class="subheader">First hours</div>
+- Monitor bleeding (>200 ml/hr → inform surgeon)  
+- Review labs, CXR, hemodynamics  
+- MAP goal 65–85  
+- CI >2.2, SvO2 >60  
+- Warm patient
+
+</div>
 </div>
 
-<div class="card">
-<h3>Valve Surgery <span class="tag">4 topics</span></h3>
-<p>Repair or replacement (Aortic / Mitral / Tricuspid)</p>
+<div class="card" onclick="toggle('planA')">
+<h3>Plan A Post‑Op Pathway</h3>
+<div id="planA" class="content">
+- Extubate within 6 hrs  
+- Transfer from ICU next day
+
+Reasons to delay:
+- High chest tube output  
+- Low cardiac index  
+- Escalating pressors/inotropes  
+- Poor responsiveness  
+- Failed extubation criteria
+
+POD1:
+- Mobilize  
+- Diuresis  
+- Remove chest tubes / lines  
+- Transfer to floor
+</div>
 </div>
 
-</body>
-</html>
+<div class="card" onclick="toggle('communication')">
+<h3>Communication Rules</h3>
+<div id="communication" class="content">
+- Over‑communicate
+
+Inform surgery team about:
+- Bleeding >200 ml/hr  
+- Unexpected CT output change  
+- Cardiogenic shock  
+- Inotrope changes
+
+Always coordinate:
+- Vent changes with RT  
+- ECMO changes with ECMO specialist
+</div>
+</div>
+
+</div>
+
+
+<div class="section">
+<h2>Surgeries</h2>
+
+<div class="card" onclick="toggle('cabg')">
+<h3>CABG</h3>
+<div id="cabg" class="content">
+Key note:
+- Document bypassed vessels
+
+If unstable:
+- Tamponade  
+- Graft occlusion → possible cath lab
+
+POD1 meds:
+- Beta blockers  
+- Aspirin  
+- Statin  
+- Lasix
+</div>
+</div>
+
+<div class="card" onclick="toggle('savr')">
+<h3>Surgical Aortic Valve Replacement</h3>
+<div id="savr" class="content">
+- Note valve type and size  
+- Daily anticoagulation plan
+
+If unstable:
+- Tamponade  
+- RCA occlusion  
+- LVH volume needs  
+- Pulmonary edema from diastolic dysfunction  
+- Afib intolerance
+</div>
+</div>
+
+<div class="card" onclick="toggle('mvrepair')">
+<h3>Mitral Valve Repair</h3>
+<div id="mvrepair" class="content">
+- Document SAM risk  
+- Post‑repair LV function
+
+If unstable:
+- Tamponade  
+- LCx occlusion  
+- SAM / LVOTO  
+- AV block
+</div>
+</div>
+
+</div>
+
+
+<div class="section">
+<h2>Common Problems</h2>
+
+<div class="card" onclick="toggle('shock')">
+<h3>Cardiogenic Shock</h3>
+<div id="shock" class="content">
+- Inform surgical team  
+- POCUS early (tamponade?)  
+- Check pacer settings
+
+Treatment:
+- Epi / dopamine  
+- Milrinone if MAP allows
+
+RV failure:
+- HR 90‑110  
+- Maintain sinus rhythm  
+- CVP 12‑15  
+- Increase inotropes
+
+MCS options:
+- IABP  
+- Impella  
+- RVAD  
+- VA ECMO
+</div>
+</div>
+
+<div class="card" onclick="toggle('bleeding')">
+<h3>Bleeding / Coagulopathy</h3>
+<div
