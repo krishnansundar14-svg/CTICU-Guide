@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Receiving Patients from OR</title>
+<title>Receiving patients from the OR</title>
 <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-<h1>Receiving Patients from OR</h1>
+<div id="nav-placeholder"></div>
+
+<h1>Receiving patients from the OR</h1>
 
 <div class="section">
-<h2>Before Arrival</h2>
+
+<h2>Before arrival</h2>
+
 <ul>
-<li>Start preliminary handoff note</li>
-<li>Document PMH and surgery type</li>
+<li>Start prelim handoff note. Note PMH, Surgery type</li>
 </ul>
+
 </div>
 
-<div class="section">
-<h2>Handoff</h2>
-<ul>
-<li>Surgical details and postoperative plan</li>
-<li>Airway and lines</li>
-<li>Echo findings (LV/RV function)</li>
-<li>I/O including blood products</li>
-<li>Rhythm, hemodynamics, drips</li>
-</ul>
-</div>
 
 <div class="section">
-<h2>First Hours</h2>
+
+<h2>Handover from OR team</h2>
+
+<h3>Surgeons</h3>
+
 <ul>
-<li>Monitor bleeding (>200 ml/hr notify surgeon)</li>
-<li>Review labs, chest X‑ray, vitals</li>
-<li>MAP goal 65–85</li>
-<li>If PA catheter: CI >2.2, SvO2 >60</li>
-<li>Warm patient</li>
+<li>Past history</li>
+<li>Surgery details</li>
+<li>Drains, tubes</li>
+<li>Postoperative plan and concerns</li>
 </ul>
+
+<h3>Anesthesiologists</h3>
+
+<ul>
+<li>Airway</li>
+<li>Lines</li>
+<li>Intraoperative course</li>
+<li>Echo report (note LV and RV function)</li>
+<li>I/O, including blood products</li>
+<li>Current rhythm, Hemodynamics, current drips</li>
+<li>Paralysis reversed?</li>
+</ul>
+
 </div>
+
+
+<div class="section">
+
+<h2>First few hours after arrival</h2>
+
+<ul>
+<li>Monitor for bleeding. >200 ml/hr: inform attending surgeon</li>
+<li>Monitor labs, chest Xray, vitals, rhythm, hemodynamics, I/O</li>
+<li>Usual MAP goals 65-85 mm Hg</li>
+<li>If PA catheter present: CI >2.2, SvO2> 60</li>
+<li>Patients are often cold. Get Bair Hugger started</li>
+</ul>
+
+</div>
+
+
+<script src="nav.js"></script>
+
+<script>
+document.getElementById("nav-workflow").classList.add("active")
+</script>
 
 </body>
+
 </html>
