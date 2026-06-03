@@ -11,27 +11,40 @@ font-family:Arial;
 padding:20px;
 }
 
+h1{
+font-size:28px;
+}
+
 .section{
-margin-top:30px;
+margin-top:35px;
 }
 
 .card{
 background:#16161d;
-border-radius:16px;
+border-radius:14px;
 padding:16px;
 margin:12px 0;
 cursor:pointer;
 }
 
+.card:hover{
+background:#1d1d26;
+}
+
 .content{
 display:none;
-margin-top:10px;
+margin-top:12px;
 color:#d0d0d0;
 line-height:1.5;
 }
 
 ul{
-margin-top:8px;
+margin-top:6px;
+}
+
+.topic{
+font-weight:bold;
+margin-top:10px;
 }
 </style>
 
@@ -49,81 +62,57 @@ else{x.style.display="block";}
 
 <h1>CTICU Quick Reference Guide</h1>
 
+
 <div class="section">
 <h2>General Workflow</h2>
 
-<div class="card" onclick="toggle('workflow1')">
+<div class="card" onclick="toggle('or')">
 <h3>Receiving Patients From OR</h3>
+<div id="or" class="content">
 
-<div id="workflow1" class="content">
-
-<b>Before arrival</b>
+<div class="topic">Before arrival</div>
 <ul>
 <li>Start preliminary handoff note</li>
 <li>Document PMH and surgery type</li>
 </ul>
 
-<b>Handover from OR team</b>
-
+<div class="topic">Handoff</div>
 <ul>
-<li><b>Surgeons</b>
-<ul>
-<li>Past history</li>
-<li>Surgery details</li>
-<li>Drains and tubes</li>
-<li>Postoperative plan</li>
-</ul>
-</li>
-
-<li><b>Anesthesiology</b>
-<ul>
-<li>Airway</li>
-<li>Lines</li>
-<li>Intraoperative course</li>
-<li>Echo (LV and RV function)</li>
-<li>I/O and blood products</li>
-<li>Current rhythm and drips</li>
-<li>Paralysis reversed</li>
-</ul>
-</li>
+<li><b>Surgeons:</b> history, surgery details, drains/tubes, postop plan</li>
+<li><b>Anesthesia:</b> airway, lines, intraop course, echo LV/RV function, I/O, rhythm, drips, paralysis reversal</li>
 </ul>
 
-<b>First few hours</b>
-
+<div class="topic">First hours</div>
 <ul>
-<li>Monitor bleeding (>200 ml/hr notify surgeon)</li>
-<li>Review labs, CXR, vitals and hemodynamics</li>
+<li>Monitor bleeding (>200 ml/hr notify surgeon)</li>
+<li>Review labs, CXR, hemodynamics</li>
 <li>MAP goal 65‑85</li>
-<li>CI >2.2 and SvO2 >60 if PA catheter present</li>
-<li>Warm patient with Bair Hugger</li>
+<li>CI >2.2, SvO₂ >60 if PA catheter</li>
+<li>Warm patient</li>
 </ul>
 
 </div>
 </div>
 
 
-<div class="card" onclick="toggle('workflow2')">
-<h3>Plan A Post‑Operative Pathway</h3>
-
-<div id="workflow2" class="content">
-
+<div class="card" onclick="toggle('planA')">
+<h3>Plan A Case</h3>
+<div id="planA" class="content">
 <ul>
 <li>Extubate within 6 hours</li>
 <li>Transfer out of ICU next day</li>
 </ul>
 
-<b>Reasons to delay</b>
-
+<div class="topic">Reasons to delay</div>
 <ul>
 <li>High chest tube output</li>
 <li>Low cardiac index</li>
-<li>Escalating pressors or inotropes</li>
+<li>Escalating pressors</li>
 <li>Limited responsiveness</li>
-<li>Failed extubation criteria</li>
+<li>Unable to meet extubation criteria</li>
 </ul>
 
-<b>POD1</b>
-
+<div class="topic">POD1</div>
 <ul>
 <li>Mobilize</li>
 <li>Diuresis</li>
@@ -135,7 +124,56 @@ else{x.style.display="block";}
 </div>
 </div>
 
+
+<div class="card" onclick="toggle('sendOR')">
+<h3>Sending Patient to OR</h3>
+<div id="sendOR" class="content">
+<ul>
+<li>NPO immediately</li>
+<li>APP or fellow posts case</li>
+<li>Call CTOR charge nurse</li>
+<li>Perfusion pager if MCS or CPB needed</li>
+<li>Notify cardiac anesthesia</li>
+<li>Prepare blood products</li>
+<li>Optimize tubing/drips for transport</li>
+<li>Consent family</li>
+</ul>
 </div>
+</div>
+
+
+<div class="card" onclick="toggle('rounds')">
+<h3>Morning Rounds</h3>
+<div id="rounds" class="content">
+<ul>
+<li>Present hemodynamics, respiratory data, CXR</li>
+<li>Discuss major concerns</li>
+<li>Review chest tube output</li>
+<li>Discuss tube removal</li>
+<li>Discuss diuresis</li>
+</ul>
+</div>
+</div>
+
+
+<div class="card" onclick="toggle('communication')">
+<h3>Communication Rules</h3>
+<div id="communication" class="content">
+<ul>
+<li>Overcommunication preferred</li>
+<li>Notify surgeons of major deviations</li>
+<li>Bleeding >200 ml/hr</li>
+<li>Unexpected chest tube change</li>
+<li>Worsening cardiogenic shock</li>
+<li>Inotrope changes</li>
+<li>Always coordinate vent changes with RT</li>
+<li>Always coordinate ECMO changes with ECMO specialist</li>
+</ul>
+</div>
+</div>
+
+</div>
+
 
 
 <div class="section">
@@ -143,57 +181,50 @@ else{x.style.display="block";}
 
 <div class="card" onclick="toggle('cabg')">
 <h3>CABG</h3>
-
 <div id="cabg" class="content">
-
 <ul>
 <li>Document bypassed vessels</li>
 </ul>
 
-<b>If patient deteriorates</b>
-
+<div class="topic">Patient deteriorating</div>
 <ul>
 <li>Tamponade</li>
-<li>Graft occlusion → consider cath lab</li>
+<li>Graft occlusion → possible cath lab</li>
 </ul>
 
-<b>POD1 medications</b>
-
+<div class="topic">POD1</div>
 <ul>
-<li>Beta blockers</li>
+<li>Beta blocker</li>
 <li>Aspirin</li>
 <li>Statin</li>
 <li>Lasix</li>
 </ul>
-
 </div>
 </div>
 
 
 <div class="card" onclick="toggle('savr')">
-<h3>Surgical Aortic Valve Replacement</h3>
-
+<h3>SAVR</h3>
 <div id="savr" class="content">
-
 <ul>
-<li>Document valve type and size</li>
-<li>Discuss anticoagulation daily</li>
+<li>Note valve type and size</li>
+<li>Daily anticoagulation discussion</li>
 </ul>
 
-<b>If patient deteriorates</b>
-
+<div class="topic">Patient deteriorating</div>
 <ul>
 <li>Tamponade</li>
 <li>RCA occlusion</li>
 <li>Hypovolemia in LVH</li>
-<li>Pulmonary edema with diastolic dysfunction</li>
-<li>Atrial fibrillation intolerance</li>
+<li>Afib intolerance</li>
 </ul>
-
 </div>
 </div>
 
-</div>
 
-</body>
-</html>
+<div class="card" onclick="toggle('mvrepair')">
+<h3>Mitral Valve Repair</h3>
+<div id="mvrepair" class="content">
+<ul>
+<li>Note SAM tendency</li>
+<li>Assess LV function
