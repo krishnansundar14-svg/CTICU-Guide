@@ -2,16 +2,14 @@
 <html>
 <head>
 <title>CTICU Quick Reference</title>
+
 <style>
 body{
 background:#0b0b0f;
 color:white;
-font-family:Arial, sans-serif;
-margin:0;
+font-family:Arial;
 padding:20px;
 }
-
-h1{font-size:28px;}
 
 .section{
 margin-top:30px;
@@ -25,28 +23,23 @@ margin:12px 0;
 cursor:pointer;
 }
 
-.card h3{
-margin:0;
-}
-
 .content{
 display:none;
 margin-top:10px;
-color:#cfcfcf;
+color:#d0d0d0;
 line-height:1.5;
 }
 
-.subheader{
-font-weight:bold;
-margin-top:10px;
+ul{
+margin-top:8px;
 }
 </style>
 
 <script>
 function toggle(id){
 var x=document.getElementById(id);
-if(x.style.display==="none"){x.style.display="block";}
-else{x.style.display="none";}
+if(x.style.display==="block"){x.style.display="none";}
+else{x.style.display="block";}
 }
 </script>
 
@@ -59,74 +52,86 @@ else{x.style.display="none";}
 <div class="section">
 <h2>General Workflow</h2>
 
-<div class="card" onclick="toggle('orarrival')">
-<h3>Receiving Patients from OR</h3>
-<div id="orarrival" class="content">
+<div class="card" onclick="toggle('workflow1')">
+<h3>Receiving Patients From OR</h3>
 
-<div class="subheader">Before arrival</div>
-- Start prelim handoff note (PMH, surgery type)
+<div id="workflow1" class="content">
 
-<div class="subheader">Handover</div>
-Surgeons:
-- Past history  
-- Surgery details  
-- Drains / tubes  
-- Post‑op plan
+<b>Before arrival</b>
+<ul>
+<li>Start preliminary handoff note</li>
+<li>Document PMH and surgery type</li>
+</ul>
 
-Anesthesia:
-- Airway  
-- Lines  
-- Intraop course  
-- Echo (LV/RV function)  
-- Blood products  
-- Rhythm / drips  
-- Paralysis reversed?
+<b>Handover from OR team</b>
 
-<div class="subheader">First hours</div>
-- Monitor bleeding (>200 ml/hr → inform surgeon)  
-- Review labs, CXR, hemodynamics  
-- MAP goal 65–85  
-- CI >2.2, SvO2 >60  
-- Warm patient
+<ul>
+<li><b>Surgeons</b>
+<ul>
+<li>Past history</li>
+<li>Surgery details</li>
+<li>Drains and tubes</li>
+<li>Postoperative plan</li>
+</ul>
+</li>
+
+<li><b>Anesthesiology</b>
+<ul>
+<li>Airway</li>
+<li>Lines</li>
+<li>Intraoperative course</li>
+<li>Echo (LV and RV function)</li>
+<li>I/O and blood products</li>
+<li>Current rhythm and drips</li>
+<li>Paralysis reversed</li>
+</ul>
+</li>
+</ul>
+
+<b>First few hours</b>
+
+<ul>
+<li>Monitor bleeding (>200 ml/hr notify surgeon)</li>
+<li>Review labs, CXR, vitals and hemodynamics</li>
+<li>MAP goal 65‑85</li>
+<li>CI >2.2 and SvO2 >60 if PA catheter present</li>
+<li>Warm patient with Bair Hugger</li>
+</ul>
 
 </div>
 </div>
 
-<div class="card" onclick="toggle('planA')">
-<h3>Plan A Post‑Op Pathway</h3>
-<div id="planA" class="content">
-- Extubate within 6 hrs  
-- Transfer from ICU next day
 
-Reasons to delay:
-- High chest tube output  
-- Low cardiac index  
-- Escalating pressors/inotropes  
-- Poor responsiveness  
-- Failed extubation criteria
+<div class="card" onclick="toggle('workflow2')">
+<h3>Plan A Post‑Operative Pathway</h3>
 
-POD1:
-- Mobilize  
-- Diuresis  
-- Remove chest tubes / lines  
-- Transfer to floor
-</div>
-</div>
+<div id="workflow2" class="content">
 
-<div class="card" onclick="toggle('communication')">
-<h3>Communication Rules</h3>
-<div id="communication" class="content">
-- Over‑communicate
+<ul>
+<li>Extubate within 6 hours</li>
+<li>Transfer out of ICU next day</li>
+</ul>
 
-Inform surgery team about:
-- Bleeding >200 ml/hr  
-- Unexpected CT output change  
-- Cardiogenic shock  
-- Inotrope changes
+<b>Reasons to delay</b>
 
-Always coordinate:
-- Vent changes with RT  
-- ECMO changes with ECMO specialist
+<ul>
+<li>High chest tube output</li>
+<li>Low cardiac index</li>
+<li>Escalating pressors or inotropes</li>
+<li>Limited responsiveness</li>
+<li>Failed extubation criteria</li>
+</ul>
+
+<b>POD1</b>
+
+<ul>
+<li>Mobilize</li>
+<li>Diuresis</li>
+<li>Chest tube removal</li>
+<li>Line removal</li>
+<li>Transfer to floor</li>
+</ul>
+
 </div>
 </div>
 
@@ -134,86 +139,61 @@ Always coordinate:
 
 
 <div class="section">
-<h2>Surgeries</h2>
+<h2>Cardiac Surgeries</h2>
 
 <div class="card" onclick="toggle('cabg')">
 <h3>CABG</h3>
+
 <div id="cabg" class="content">
-Key note:
-- Document bypassed vessels
 
-If unstable:
-- Tamponade  
-- Graft occlusion → possible cath lab
+<ul>
+<li>Document bypassed vessels</li>
+</ul>
 
-POD1 meds:
-- Beta blockers  
-- Aspirin  
-- Statin  
-- Lasix
+<b>If patient deteriorates</b>
+
+<ul>
+<li>Tamponade</li>
+<li>Graft occlusion → consider cath lab</li>
+</ul>
+
+<b>POD1 medications</b>
+
+<ul>
+<li>Beta blockers</li>
+<li>Aspirin</li>
+<li>Statin</li>
+<li>Lasix</li>
+</ul>
+
 </div>
 </div>
+
 
 <div class="card" onclick="toggle('savr')">
 <h3>Surgical Aortic Valve Replacement</h3>
+
 <div id="savr" class="content">
-- Note valve type and size  
-- Daily anticoagulation plan
 
-If unstable:
-- Tamponade  
-- RCA occlusion  
-- LVH volume needs  
-- Pulmonary edema from diastolic dysfunction  
-- Afib intolerance
-</div>
-</div>
+<ul>
+<li>Document valve type and size</li>
+<li>Discuss anticoagulation daily</li>
+</ul>
 
-<div class="card" onclick="toggle('mvrepair')">
-<h3>Mitral Valve Repair</h3>
-<div id="mvrepair" class="content">
-- Document SAM risk  
-- Post‑repair LV function
+<b>If patient deteriorates</b>
 
-If unstable:
-- Tamponade  
-- LCx occlusion  
-- SAM / LVOTO  
-- AV block
+<ul>
+<li>Tamponade</li>
+<li>RCA occlusion</li>
+<li>Hypovolemia in LVH</li>
+<li>Pulmonary edema with diastolic dysfunction</li>
+<li>Atrial fibrillation intolerance</li>
+</ul>
+
 </div>
 </div>
 
 </div>
 
-
-<div class="section">
-<h2>Common Problems</h2>
-
-<div class="card" onclick="toggle('shock')">
-<h3>Cardiogenic Shock</h3>
-<div id="shock" class="content">
-- Inform surgical team  
-- POCUS early (tamponade?)  
-- Check pacer settings
-
-Treatment:
-- Epi / dopamine  
-- Milrinone if MAP allows
-
-RV failure:
-- HR 90‑110  
-- Maintain sinus rhythm  
-- CVP 12‑15  
-- Increase inotropes
-
-MCS options:
-- IABP  
-- Impella  
-- RVAD  
-- VA ECMO
-</div>
-</div>
-
-<div class="card" onclick="toggle('bleeding')">
-<h3>Bleeding / Coagulopathy</h3>
-<div
+</body>
+</html>
