@@ -20,14 +20,20 @@ text-align:center;
 
 .header{
 font-size:28px;
-padding:20px;
+padding-top:20px;
+}
+
+.instructions{
+margin-top:8px;
+font-size:16px;
+color:#aaa;
 }
 
 .topnav{
 display:flex;
 justify-content:center;
 gap:10px;
-padding-bottom:10px;
+padding:15px;
 flex-wrap:wrap;
 }
 
@@ -50,7 +56,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 gap:10px;
-padding:15px;
+padding:10px;
 }
 
 .subnav a{
@@ -69,112 +75,10 @@ font-size:16px;
 background:#333;
 }
 
-.instructions{
-margin-top:30px;
-font-size:16px;
-color:#aaa;
-}
-
 </style>
 
 <script>
 
 function showSection(section){
 
-const subnav=document.getElementById("subnav")
-
-if(section==="workflow"){
-subnav.innerHTML=`
-
-<a href="workflow_or.html">Receiving OR Patient</a>
-<a href="workflow_planA.html">Plan A Case</a>
-<a href="workflow_sendOR.html">Send Patient to OR</a>
-<a href="workflow_rounds.html">Morning Rounds</a>
-<a href="workflow_bedflow.html">ICU Bedflow</a>
-<a href="workflow_communication.html">Communication Rules</a>
-<a href="workflow_phones.html">Team Phone Numbers</a>
-
-`
-}
-
-if(section==="surgeries"){
-subnav.innerHTML=`
-
-<a href="cabg.html">CABG</a>
-<a href="savr.html">SAVR</a>
-<a href="mvrepair.html">MV Repair</a>
-<a href="mvreplacement.html">MV Replacement</a>
-<a href="tvrepair.html">TV Repair</a>
-<a href="tvr.html">TV Replacement</a>
-<a href="aortic.html">Ascending Aortic Surgery</a>
-<a href="taaa.html">Open TAAA Repair</a>
-<a href="hearttransplant.html">Heart Transplant</a>
-<a href="lungtransplant.html">Lung Transplant</a>
-<a href="pte.html">PTE</a>
-<a href="lvad.html">LVAD</a>
-<a href="tavr.html">TAVR</a>
-<a href="tevar.html">TEVAR / EVAR</a>
-<a href="medicallvad.html">Medical LVAD Admission</a>
-
-`
-}
-
-if(section==="problems"){
-subnav.innerHTML=`
-
-<a href="cardiogenicshock.html">Cardiogenic Shock</a>
-<a href="hypovolemicshock.html">Hypovolemic Shock</a>
-<a href="bleeding.html">Bleeding / Coagulopathy</a>
-<a href="tamponade.html">Tamponade</a>
-<a href="vasoplegia.html">Vasoplegia</a>
-<a href="arrhythmias.html">Arrhythmias</a>
-<a href="respiratoryfailure.html">Respiratory Failure</a>
-<a href="aki.html">AKI</a>
-
-`
-}
-
-if(section==="mcs"){
-subnav.innerHTML=`
-
-<a href="iabp.html">IABP</a>
-<a href="impella.html">Impella</a>
-<a href="vaecmo.html">VA ECMO</a>
-<a href="vvecmo.html">VV ECMO</a>
-<a href="vavecmo.html">V‑AV ECMO</a>
-<a href="hm3.html">HM3 LVAD</a>
-<a href="rvad.html">RVAD</a>
-
-`
-}
-
-}
-
-</script>
-
-</head>
-
-<body>
-
-<div class="header">
-CTICU Quick Reference Guide
-</div>
-
-<div class="topnav">
-
-<button onclick="showSection('workflow')">Workflow</button>
-<button onclick="showSection('surgeries')">Surgeries</button>
-<button onclick="showSection('problems')">Problems</button>
-<button onclick="showSection('mcs')">MCS</button>
-
-</div>
-
-<div id="subnav" class="subnav"></div>
-
-<div class="instructions">
-Select a category above.
-</div>
-
-</body>
-
-</html>
+const subnav=document.getElementById("sub
