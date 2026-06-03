@@ -119,4 +119,55 @@ subnav.innerHTML=`
 <a href="hypovolemicshock.html">Hypovolemic Shock</a>
 <a href="bleeding.html">Bleeding / Coagulopathy</a>
 <a href="tamponade.html">Tamponade</a>
-<a href="vasople
+<a href="vasoplegia.html">Vasoplegia</a>
+<a href="arrhythmias.html">Arrhythmias</a>
+<a href="respiratoryfailure.html">Respiratory Failure</a>
+<a href="aki.html">AKI</a>
+
+`
+}
+
+if(section==="mcs"){
+subnav.innerHTML=`
+
+<a href="iabp.html">IABP</a>
+<a href="impella.html">Impella</a>
+<a href="vaecmo.html">VA ECMO</a>
+<a href="vvecmo.html">VV ECMO</a>
+<a href="vavecmo.html">V‑AV ECMO</a>
+<a href="hm3.html">HM3 LVAD</a>
+<a href="rvad.html">RVAD</a>
+
+`
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+CTICU Quick Reference Guide
+</div>
+
+<div class="topnav">
+
+<button onclick="showSection('workflow')">Workflow</button>
+<button onclick="showSection('surgeries')">Surgeries</button>
+<button onclick="showSection('problems')">Problems</button>
+<button onclick="showSection('mcs')">MCS</button>
+
+</div>
+
+<div id="subnav" class="subnav"></div>
+
+<div class="instructions">
+Select a category above.
+</div>
+
+</body>
+
+</html>
